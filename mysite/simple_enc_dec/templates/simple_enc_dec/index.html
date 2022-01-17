@@ -1,23 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'simple_enc_dec/css/styles.css' %}">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Home Page</title>
 </head>
 <body>
 
-<h1> Form </h1>
+<div class="Heading">
+    <h1> Simple Atbash Encryption Cipher </h1>
+</div>
+
+<div class="Introduction">
+    <ul>
+        <li>
+            The Web application provides a GUI for encrypting and decrypting Plain/Encrypted Text based on Atbash Cipher
+        </li>
+        <li>
+            Atbash Algorithm is a monoalphabetic cipher and mapping it to its reverse.
+        </li>
+        <li>
+            A is mapped to Z, B is mapped to Y and so on similarly in similar order.
+        </li>
+        <li>
+            Characters other than alphabets are unchanged.
+        </li>
+    </ul>
+</div>
 
 <form action="" method="post">
     {% csrf_token %}
-    <label for="encrypt_str">Enter String to Encrypt: </label>
-    <input id="encrypt_str" type="text" name="encrypt_str" value="{{ encrypt_str }}">
-    <br><br>
-    <label for="decrypt_str">Enter String to Decrypt: </label>
-    <input id="decrypt_str" type="text" name="decrypt_str" value="{{ decrypt_str }}">
-    <br><br>
-    <input type="submit" name="submit_type" value="encrypt">
-    <input type="submit" name="submit_type" value="decrypt">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <textarea id="encrypt_str" name="encrypt_str" rows = "5" cols="70" placeholder="Plain Text">{{ encrypt_str }}</textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-1">
+            <input type="submit" name="submit_type" value="encrypt">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+            <input type="submit" name="submit_type" value="decrypt">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-6">
+            <textarea id="decrypt_str" name="decrypt_str" rows = "5" cols="70" placeholder="Encrypted Text">{{ decrypt_str }}</textarea>
+        </div>
+    </div>
 </form>
 
 </body>

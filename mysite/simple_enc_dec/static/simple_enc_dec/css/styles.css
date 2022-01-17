@@ -1,0 +1,45 @@
+{% load static %}
+
+body {
+    background: white url("images/img_1.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
+
+.Heading {
+    text-align:center;
+    color:white;
+    border: 2px;
+    padding: 6px;
+    margin: 6px;
+}
+
+.Introduction {
+    color: white;
+    font-size: 130%;
+    width: 790px;
+    border: 2px;
+    padding: 6px;
+    margin: 4px;
+    font-weight: bold;
+}
+
+li {
+    margin: 0 0 10px 0;
+}
+
+.row {
+    margin: 10px;
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#3e7ee6;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
