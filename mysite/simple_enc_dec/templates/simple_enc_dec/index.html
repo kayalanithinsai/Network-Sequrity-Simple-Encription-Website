@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+
+<h1> Form </h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="encrypt_str">Enter String to Encrypt: </label>
+    <input id="encrypt_str" type="text" name="encrypt_str" value="{{ encrypt_str }}">
+    <br><br>
+    <label for="decrypt_str">Enter String to Decrypt: </label>
+    <input id="decrypt_str" type="text" name="decrypt_str" value="{{ decrypt_str }}">
+    <br><br>
+    <input type="submit" name="submit_type" value="encrypt">
+    <input type="submit" name="submit_type" value="decrypt">
+</form>
+
+</body>
+</html>

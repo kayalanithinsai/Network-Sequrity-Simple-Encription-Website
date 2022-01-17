@@ -1,2 +1,9 @@
 # Network-Sequrity-Simple-Encription-Website
-Encipher and decipher with simple encryption algorithms
+
+
+- [ ] Django basic docs
+- [ ] Front end design
+- [ ] fill in backend functions
+- [ ] update front end and add cesar cipher
+
+
